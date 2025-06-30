@@ -1,0 +1,13 @@
+/*
+Companies often perform salary analyses to ensure fair compensation practices.
+One useful analysis is to check if there are any employees earning more than their direct managers.
+
+As a HR Analyst, you're asked to identify all employees who earn more than their direct managers.
+The result should include the employee's ID and name.
+*/
+
+SELECT e2.employee_id,e2.name FROM employee e1
+JOIN employee e2
+ON e1.employee_id=e2.manager_id
+WHERE e2.salary>e1.salary 
+;
